@@ -28,3 +28,9 @@ generate.py는 저장된 모델을 불러와서 새로운 텍스트를 생성하
 4. 실행 결과
 
 ![실행 결과](docs/screenshots/result.png)
+
+5. 모델 구조
+
+이 프로젝트에서 구현한 GPT2.0은 글자 단위로 다음 글자를 예측하는 모델이다. 먼저 텍스트를 숫자로 바꾼 뒤, token embedding과 positional embedding을 통해 글자 정보와 위치 정보를 함께 사용한다.
+
+그다음 masked self-attention을 이용하여 현재 위치보다 뒤에 있는 글자는 보지 못하게 하고, 앞에 나온 글자들만 참고해서 다음 글자를 예측하도록 했다. 이후 multi-head attention, feedforward layer, layer normalization, transformer block을 쌓아서 GPT2.0 모델을 구성했다.
