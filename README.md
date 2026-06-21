@@ -26,3 +26,5 @@ generate.py는 저장된 모델을 불러와서 새로운 텍스트를 생성하
    python src\generate.py
 
 4. 실행 결과
+
+![실행 결과](docs/screenshots/result.png)
